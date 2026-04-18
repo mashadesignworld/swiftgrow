@@ -26,7 +26,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-3xl"
         >
-          Engineering the <span className="text-brand-500">Future</span> of Kenyan Soil.
+          Engineering the <span className="text-brand-500">Future</span> of Kenyan Soils.
         </motion.h1>
         
         <motion.p 

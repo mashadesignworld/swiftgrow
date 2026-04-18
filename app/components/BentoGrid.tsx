@@ -22,7 +22,7 @@ export default function BentoGrid() {
   {/* The Background Image */}
   <Image 
     src="/product-banner.jpg" // Ensure this file exists in your public folder
-    alt="Premium Bio-Organic Blend"
+    alt="Premium Bio-Organic Products"
     fill
     className="object-cover"
     priority
