@@ -31,7 +31,7 @@ export default function Footer() {
             <h3 className="text-white font-bold mb-6">Contact</h3>
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-2"><MapPin size={16} /> Nairobi, Kenya</li>
-              <li className="flex items-center gap-2"><Phone size={16} /> +254 700 000 000</li>
+              <li className="flex items-center gap-2"><Phone size={16} /> +254 721 595 989</li>
               <li className="flex items-center gap-2"><Mail size={16} /> info@swiftgroworganics.co.ke</li>
             </ul>
           </div>
