@@ -34,7 +34,7 @@ export default function Navbar() {
           <button className="p-2 hover:bg-slate-100 rounded-full transition">
             <ShoppingBag size={20} className="text-slate-700" />
           </button>
-          <button className="hidden md:block bg-green-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-green-700 transition">
+          <button className="hidden md:block bg-brand-500 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-green-700 transition">
             Shop Now
           </button>
           <button 
