@@ -49,6 +49,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden absolute w-full bg-white border-b border-slate-100 py-6 px-6 flex flex-col gap-4 animate-in slide-in-from-top-5">
+          <Link href="/about" className="text-lg font-medium">About</Link>
           <Link href="/products" className="text-lg font-medium">Products</Link>
           <Link href="/science" className="text-lg font-medium">Our Science</Link>
           <Link href="/impact" className="text-lg font-medium">Impact</Link>
