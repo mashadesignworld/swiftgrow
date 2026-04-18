@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import {  Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -40,8 +40,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-6">Follow Us</h3>
             <div className="flex gap-4 mb-8">
-              <Link href="#" className="p-2 bg-emerald-900 rounded-full hover:bg-emerald-800 transition"><Facebook size={18} /></Link>
-              <Link href="#" className="p-2 bg-emerald-900 rounded-full hover:bg-emerald-800 transition"><Instagram size={18} /></Link>
+           
             </div>
             <p className="text-xs text-emerald-500 italic">&quot;The Future of Sustainable Farming&quot;</p>
           </div>
