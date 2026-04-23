@@ -23,7 +23,8 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-            <Link href="/about" className="hover:text-green-600 transition">About Us</Link>
+          <Link href="/" className="hover:text-green-600 transition">Home</Link>
+          <Link href="/about" className="hover:text-green-600 transition">About Us</Link>
           <Link href="/products" className="hover:text-green-600 transition">Products</Link>
           
         </div>
@@ -48,6 +49,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden absolute w-full bg-white border-b border-slate-100 py-6 px-6 flex flex-col gap-4 animate-in slide-in-from-top-5">
+          <Link href="/" className="text-lg font-medium">Home</Link>
           <Link href="/about" className="text-lg font-medium">About</Link>
           <Link href="/products" className="text-lg font-medium">Products</Link>
         
