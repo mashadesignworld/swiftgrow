@@ -2,6 +2,8 @@
 import { Sprout, Droplets, Recycle, Target, Quote } from "lucide-react"; // Added Quote
 import Image from "next/image";
 import ProductAnalysis from "../components/ProductAnalysis";
+import OrderModal from "../components/OrderModal";
+import { useState } from "react";
 
 export default function ProductPage() {
   const applicationRates = [
@@ -9,9 +11,10 @@ export default function ProductPage() {
     { target: "Flower Beds", rate: "0.5 – 1 kg", area: "10 m²" },
     { target: "Commercial Farms", rate: "5 – 7.5 kg", area: "100 m²" },
   ];
-
+const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <main className="min-h-screen bg-slate-50 py-12">
+      <OrderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="container mx-auto px-6 max-w-5xl pb-24">
         
         {/* Product Hero */}
@@ -46,7 +49,9 @@ export default function ProductPage() {
               and stimulates microbial activity while being more cost-effective than chemical options.
             </p>
             <div className="mt-8 flex gap-4">
-              <button className="bg-brand-500 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-600 transition">
+              <button 
+              onClick={() => setIsModalOpen(true)}
+              className="bg-brand-500 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-600 transition">
                 Order Now
               </button>
             </div>
@@ -127,7 +132,9 @@ export default function ProductPage() {
             <span className="text-xs text-slate-500 font-medium">Starting at</span>
             <span className="text-xl font-bold text-emerald-900">KES 1,500</span>
           </div>
-          <button className="flex-1 bg-brand-500 text-white py-3 rounded-xl font-bold hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
+          <button 
+          onClick={() => setIsModalOpen(true)}
+          className="flex-1 bg-brand-500 text-white py-3 rounded-xl font-bold hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
             Order Now
           </button>
         </div>

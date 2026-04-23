@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Leaf, BarChart3, Users, ShieldCheck } from "lucide-react";
+import { Leaf, BarChart3, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
 

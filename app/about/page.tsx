@@ -1,5 +1,5 @@
 "use client";
-import { Leaf, Droplets, TrendingUp, ShieldCheck, Scale, Recycle, Target, Globe, Sprout } from "lucide-react";
+import {  Recycle, Target, Globe, Sprout } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutPage() {
