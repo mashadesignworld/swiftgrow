@@ -41,7 +41,7 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
             <input 
               type="text" 
               className="w-full p-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none"
-              placeholder="e.g. John Doe"
+              placeholder="e.g. Mkulima John"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
