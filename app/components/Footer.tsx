@@ -9,7 +9,7 @@ export default function Footer() {
           
           {/* Branding Column */}
           <div className="col-span-1 md:col-span-1">
-            <h2 className="text-white text-2xl font-bold mb-4">SwiftGrow</h2>
+            <h2 className="text-white text-2xl font-bold mb-4">Boomgro</h2>
             <p className="text-sm leading-relaxed">
               High-quality pelletized organic fertilizer for commercial agriculture, lawns, and gardens. 
               Feed the soil, and it will feed you.
@@ -32,7 +32,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-2"><MapPin size={16} /> Nairobi, Kenya</li>
               <li className="flex items-center gap-2"><Phone size={16} /> +254 721 595 989</li>
-              <li className="flex items-center gap-2"><Mail size={16} /> info@swiftgroworganics.co.ke</li>
+              <li className="flex items-center gap-2"><Mail size={16} /> info@swiftgrowkenya.co.ke</li>
             </ul>
           </div>
 

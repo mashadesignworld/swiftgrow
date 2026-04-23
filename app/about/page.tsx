@@ -1,67 +1,74 @@
 "use client";
-import { Leaf, Droplets, TrendingUp, ShieldCheck, Scale, Recycle } from "lucide-react";
+import { Leaf, Droplets, TrendingUp, ShieldCheck, Scale, Recycle, Target, Globe, Sprout } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutPage() {
-  const benefits = [
-    { icon: Leaf, title: "High Nutrient Concentration", desc: "Rich in NPK, calcium, magnesium, and essential micronutrients for total plant health." },
-    { icon: Droplets, title: "Soil Structure", desc: "Increases organic matter, aeration, and water retention. Perfect for sandy soils." },
-    { icon: TrendingUp, title: "Increased Yield", desc: "Proven high productivity of over 90% compared to standard controls." },
-    { icon: Scale, title: "Slow-Release", desc: "Consistent, sustainable nutrient delivery without the leaching of chemicals." },
-    { icon: ShieldCheck, title: "pH Regulation", desc: "Neutralizes soil acidity and alkalinity for optimal nutrient uptake." },
-    { icon: Recycle, title: "Eco-Friendly", desc: "A circular economy approach that lowers reliance on harmful synthetic fertilizers." },
+  const sdgs = [
+    { title: "Zero Hunger", desc: "Boosting farm yields to ensure food security for local communities.", icon: Target },
+    { title: "Responsible Consumption", desc: "Turning agricultural by-products into valuable resources through a circular economy.", icon: Recycle },
+    { title: "Climate Action", desc: "Promoting soil health that sequesters carbon and retains moisture.", icon: Globe },
+    { title: "Life on Land", desc: "Restoring soil biodiversity and reducing dependence on synthetic chemicals.", icon: Sprout },
   ];
+  
 
   return (
     <main className="min-h-screen bg-slate-50">
-      {/* Hero Section with Image */}
-      <section className="bg-emerald-900 py-24 text-white">
+      
+      {/* 1. Hero: Philosophy (Keep as is, it's strong) */}
+      <section className="bg-[#586116] py-24 text-white">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-emerald-400 font-bold uppercase tracking-widest text-sm">Our Philosophy</h2>
-            <h1 className="text-5xl md:text-7xl font-extrabold mt-6 leading-tight">Feed the soil and it will feed you.</h1>
+            <h2 className="text-emerald-200 font-semibold uppercase tracking-[0.25em] text-xs">Our Philosophy</h2>
+            <h1 className="text-5xl md:text-7xl font-extrabold mt-6 leading-[1.1] tracking-tighter">Feed the soil and it will feed you.</h1>
+            <p className="mt-8 text-lg text-emerald-50/80 leading-relaxed max-w-lg">
+              At Swift Grow Kenya, we aren&apos;t just selling fertilizer; we are engineering the future of regenerative agriculture. We bridge the gap between industrial efficiency and organic sustainability.
+            </p>
           </div>
           <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl">
-            {/* Add your product/farm image to public/hero-image.jpg */}
-            <Image 
-              src="/hero-image.jpg" 
-              alt="SwiftGro Organic Fertilizer" 
-              fill 
-              className="object-cover"
-            />
+            <Image src="/tomatoes.jpg" alt="SwiftGro Organic Fertilizer" fill className="object-cover" />
           </div>
         </div>
       </section>
 
-      {/* Product Overview Section (The omitted part) */}
-      <section className="container mx-auto px-6 py-20 max-w-4xl text-center">
-        <h3 className="text-3xl font-bold text-emerald-900 mb-6">SwiftGro: High-Quality Pelletized Organic Fertilizer</h3>
-        <p className="text-lg text-slate-600 leading-relaxed mb-10">
-          Swiftgro is a nutrient-dense organic fertilizer rich in nitrogen, phosphorus, and potassium. 
-          It boosts soil fertility, improves soil structure, enhances water-holding capacity, and 
-          stimulates microbial activity while being more cost-effective than chemical fertilizers.
-        </p>
-        
-        <p className="text-lg text-slate-600 leading-relaxed">
-          At Swift Grow Kenya, we take the utmost pride in providing the highest quality organic 
-          pelletized fertilizer derived from poultry by-product without the hassle, expense, 
-          and risks associated with handling cumbersome raw manure.
-        </p>
+      {/* 2. Mission & Vision */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8">
+          <div className="p-10 bg-[#f9f7f4] rounded-3xl border border-emerald-900/5">
+            <h3 className="text-2xl font-bold text-emerald-900 mb-4">Our Mission</h3>
+            <p className="text-slate-600 leading-relaxed">
+              To regenerate degraded soils and enhance agricultural productivity  through sustainable, nutrient-rich
+organic solutions.
+            </p>
+          </div>
+          <div className="p-10 bg-[#586116] rounded-3xl text-white">
+            <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+            <p className="text-emerald-50/90 leading-relaxed">
+              To lead the transition towards regenerative agriculture, fostering a healthy planet and sustainable food systems.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Benefits Grid */}
-      <section className="container mx-auto px-6 pb-20">
-        <h3 className="text-3xl font-bold text-emerald-900 text-center mb-12">Key Benefits</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((item, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-              <item.icon className="text-brand-500 mb-6" size={32} />
-              <h4 className="text-xl font-bold text-emerald-900 mb-3">{item.title}</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+      {/* 3. SDG Section */}
+      <section className="py-20 container mx-auto px-6">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h3 className="text-3xl font-bold text-emerald-900">Sustainable Development Goals</h3>
+          <p className="mt-4 text-slate-600">Our operations are deeply aligned with global standards for a sustainable, food-secure future.</p>
+        </div>
+        
+        <div className="grid md:grid-cols-4 gap-6">
+          {sdgs.map((sdg, i) => (
+            <div key={i} className="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+              <sdg.icon className="text-[#586116] mb-4" size={28} />
+              <h4 className="font-bold text-emerald-900 mb-2">{sdg.title}</h4>
+              <p className="text-xs text-slate-500 leading-relaxed">{sdg.desc}</p>
             </div>
           ))}
         </div>
       </section>
+
+      
+
     </main>
   );
 }

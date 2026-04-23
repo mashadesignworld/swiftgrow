@@ -25,8 +25,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
             <Link href="/about" className="hover:text-green-600 transition">About Us</Link>
           <Link href="/products" className="hover:text-green-600 transition">Products</Link>
-          <Link href="/science" className="hover:text-green-600 transition">Our Science</Link>
-          <Link href="/impact" className="hover:text-green-600 transition">Impact</Link>
+          
         </div>
 
         {/* CTA & Mobile Toggle */}
@@ -51,8 +50,7 @@ export default function Navbar() {
         <div className="md:hidden absolute w-full bg-white border-b border-slate-100 py-6 px-6 flex flex-col gap-4 animate-in slide-in-from-top-5">
           <Link href="/about" className="text-lg font-medium">About</Link>
           <Link href="/products" className="text-lg font-medium">Products</Link>
-          <Link href="/science" className="text-lg font-medium">Our Science</Link>
-          <Link href="/impact" className="text-lg font-medium">Impact</Link>
+        
         </div>
       )}
     </nav>

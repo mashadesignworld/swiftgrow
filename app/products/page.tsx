@@ -1,6 +1,7 @@
 "use client";
-import { Sprout, Droplets, Recycle, Target} from "lucide-react";
+import { Sprout, Droplets, Recycle, Target, Quote } from "lucide-react"; // Added Quote
 import Image from "next/image";
+import ProductAnalysis from "../components/ProductAnalysis";
 
 export default function ProductPage() {
   const applicationRates = [
@@ -11,31 +12,31 @@ export default function ProductPage() {
 
   return (
     <main className="min-h-screen bg-slate-50 py-12">
-      <div className="container mx-auto px-6 max-w-5xl">
+      <div className="container mx-auto px-6 max-w-5xl pb-24">
         
         {/* Product Hero */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
- {/* The Visual Product Container */}
-<div className="relative aspect-square w-full rounded-[40px] overflow-hidden shadow-2xl border-4 border-emerald-900/10 bg-emerald-900 flex items-center justify-center">
-    
-    {/* Noise Texture */}
-    <div 
-        className="absolute inset-0 opacity-10 bg-repeat -z-10"
-        style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-        }}
-    />
+          {/* The Visual Product Container */}
+          <div className="relative aspect-square w-full rounded-[40px] overflow-hidden shadow-2xl border-4 border-emerald-900/10 bg-emerald-900 flex items-center justify-center">
+            
+            {/* Noise Texture */}
+            <div 
+              className="absolute inset-0 opacity-10 bg-repeat -z-10"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+              }}
+            />
 
-    {/* The Product Image - Fixed dimensions instead of fill */}
-    <Image 
-      src="/boomgro-package.jpg" 
-      alt="BoomGro Organic Fertilizer"
-      width={400} 
-      height={400}
-      className="object-contain p-10 w-full h-full" 
-      priority
-    />
-</div>
+            {/* The Product Image */}
+            <Image 
+              src="/boomgro.jpg" 
+              alt="BoomGro Organic Fertilizer"
+              width={400} 
+              height={400}
+              className="object-contain p-10 w-full h-full" 
+              priority
+            />
+          </div>
           <div>
             <h1 className="text-5xl font-extrabold text-emerald-900">BoomGro</h1>
             <p className="text-xl text-emerald-700 font-medium mt-2">The Black Gold Standard</p>
@@ -67,8 +68,19 @@ export default function ProductPage() {
           ))}
         </div>
 
+        {/* Mission Statement Callout */}
+        <section className="bg-emerald-900 rounded-[30px] p-10 md:p-16 text-white text-center mb-20 shadow-xl relative overflow-hidden">
+            <Quote className="text-emerald-400 mx-auto mb-6" size={48} />
+            <p className="text-2xl md:text-3xl font-medium leading-relaxed italic max-w-3xl mx-auto">
+              &quot; To lead the transition towards regenerative agriculture, fostering a healthy planet and sustainable food systems.&quot;
+            </p>
+            <div className="mt-8 w-20 h-1 bg-emerald-500 mx-auto rounded-full" />
+        </section>
+
+        <ProductAnalysis/>
+          
         {/* Application Table */}
-        <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm mb-20">
+        <div className="mt-12 bg-white rounded-3xl p-8 border border-slate-100 shadow-sm mb-20">
           <div className="flex items-center gap-2 mb-6">
             <Target className="text-brand-500" />
             <h2 className="text-2xl font-bold text-emerald-900">Application Guide</h2>
@@ -105,6 +117,19 @@ export default function ProductPage() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Mobile Sticky Order Bar */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 p-4 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] z-50">
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col">
+            <span className="text-xs text-slate-500 font-medium">Starting at</span>
+            <span className="text-xl font-bold text-emerald-900">KES 1,500</span>
+          </div>
+          <button className="flex-1 bg-brand-500 text-white py-3 rounded-xl font-bold hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
+            Order Now
+          </button>
         </div>
       </div>
     </main>

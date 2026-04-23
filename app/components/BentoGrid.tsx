@@ -9,7 +9,7 @@ export default function BentoGrid() {
     <section className="py-24 px-6 container mx-auto ">
         
       <div className="mb-12">
-        <h2 className="text-4xl font-bold text-emerald-900">Why SwiftGrow?</h2>
+        <h2 className="text-4xl font-bold text-emerald-900">Why Boomgro?</h2>
         <p className="text-slate-600 mt-2">Precision nutrition for every crop type.</p>
       </div>
 
