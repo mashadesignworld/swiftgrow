@@ -36,7 +36,7 @@ export default function ChatModal({ isOpen, onClose }: ChatModalProps) {
             <div className="bg-emerald-100 p-3 rounded-full text-brand-500">
                 <MessageCircle size={24} />
             </div>
-            <h3 className="text-2xl font-bold text-emerald-900">Chat with Expert</h3>
+            <h3 className="text-2xl font-bold text-emerald-900">Chat with an Expert</h3>
         </div>
         
         <p className="text-slate-600 mb-6 text-sm">
