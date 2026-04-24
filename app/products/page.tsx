@@ -1,5 +1,5 @@
 "use client";
-import { Sprout, Droplets, Recycle, Target, Quote } from "lucide-react"; // Added Quote
+import { Sprout, Droplets, Recycle, Target } from "lucide-react"; // Added Quote
 import Image from "next/image";
 import ProductAnalysis from "../components/ProductAnalysis";
 import OrderModal from "../components/OrderModal";
@@ -73,14 +73,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           ))}
         </div>
 
-        {/* Mission Statement Callout */}
-        <section className="bg-emerald-900 rounded-[30px] p-10 md:p-16 text-white text-center mb-20 shadow-xl relative overflow-hidden">
-            <Quote className="text-emerald-400 mx-auto mb-6" size={48} />
-            <p className="text-2xl md:text-3xl font-medium leading-relaxed italic max-w-3xl mx-auto">
-              &quot; To lead the transition towards regenerative agriculture, fostering a healthy planet and sustainable food systems.&quot;
-            </p>
-            <div className="mt-8 w-20 h-1 bg-emerald-500 mx-auto rounded-full" />
-        </section>
+        
 
         <ProductAnalysis/>
           

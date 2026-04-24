@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar"; // Add this line
 import Footer from "./components/Footer"; // Add this line
+import WhatsAppWrapper from "./components/WhatsAppWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar /> {/* Add this line */}
         {children}
+        <WhatsAppWrapper />
         <Footer />
       </body>
     </html>

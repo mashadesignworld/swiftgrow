@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { X, ShoppingBag } from "lucide-react";
+import { X, ShoppingBag, MapPin } from "lucide-react";
 
 interface OrderModalProps {
   isOpen: boolean;
@@ -10,13 +10,21 @@ interface OrderModalProps {
 export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
+  const [location, setLocation] = useState(""); // New state
   
   if (!isOpen) return null;
 
   const handleSendOrder = () => {
-    // Replace with your actual WhatsApp number (in international format, no + or 0)
     const phoneNumber = "254721595989"; 
-    const message = `Hello! I would like to order ${quantity} unit(s) of BoomGro. My name is ${name}. Please advise on payment and delivery.`;
+    // Updated message template to include location
+    const message = `*New Order Request*
+Name: ${name}
+Product: BoomGro
+Quantity: ${quantity} unit(s)
+Delivery Location: ${location}
+
+Please confirm availability and delivery details.`;
+
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
     onClose();
@@ -24,10 +32,8 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Backdrop */}
       <div className="absolute inset-0 bg-emerald-950/60 backdrop-blur-sm" onClick={onClose} />
       
-      {/* Modal */}
       <div className="relative w-full max-w-md bg-white rounded-3xl p-8 shadow-2xl animate-in fade-in zoom-in duration-300">
         <button onClick={onClose} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
           <X size={24} />
@@ -36,6 +42,7 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
         <h3 className="text-2xl font-bold text-emerald-900 mb-6">Complete Your Order</h3>
         
         <div className="space-y-4">
+          {/* Name Field */}
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
             <input 
@@ -47,6 +54,22 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
             />
           </div>
 
+          {/* Location Field */}
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-1">Delivery Location</label>
+            <div className="relative">
+              <MapPin className="absolute left-3 top-3.5 text-slate-400" size={18} />
+              <input 
+                type="text" 
+                className="w-full pl-10 p-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-500 outline-none"
+                placeholder="e.g. Mai Mahiu, Nakuru"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+              />
+            </div>
+          </div>
+
+          {/* Quantity Field */}
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Quantity (Units)</label>
             <input 

@@ -1,5 +1,5 @@
 "use client";
-import {  Recycle, Target, Globe, Sprout } from "lucide-react";
+import {  Recycle, Target, Globe, Sprout, Quote } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -67,7 +67,14 @@ organic solutions.
         </div>
       </section>
 
-      
+      {/* Mission Statement Callout */}
+        <section className="bg-emerald-900 rounded-[30px] p-10 md:p-16 text-white text-center mb-20 shadow-xl relative overflow-hidden">
+            <Quote className="text-emerald-400 mx-auto mb-6" size={48} />
+            <p className="text-2xl md:text-3xl font-medium leading-relaxed italic max-w-3xl mx-auto">
+              &quot; To lead the transition towards regenerative agriculture, fostering a healthy planet and sustainable food systems.&quot;
+            </p>
+            <div className="mt-8 w-20 h-1 bg-emerald-500 mx-auto rounded-full" />
+        </section>
 
     </main>
   );
