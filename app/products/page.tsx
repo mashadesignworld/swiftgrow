@@ -126,7 +126,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
         <div className="flex items-center justify-between gap-4">
           <div className="flex flex-col">
             <span className="text-xs text-slate-500 font-medium">Starting at</span>
-            <span className="text-xl font-bold text-emerald-900">KES 1,500</span>
+            <span className="text-xl font-bold text-emerald-900">Kshs 2000</span>
           </div>
           <button 
           onClick={() => setIsModalOpen(true)}

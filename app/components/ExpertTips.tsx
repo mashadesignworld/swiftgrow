@@ -12,7 +12,7 @@ const tips = [
   { 
     title: "Top 3 tips for vegetable gardening", 
     excerpt: "Water management and organic feeding strategies for our dry climate...",
-    image: "/garden.jpg",
+    image: "/1500garden.jpg",
     slug: "vegetable-gardening-tips"
   },
   { 
