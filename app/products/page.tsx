@@ -4,6 +4,7 @@ import Image from "next/image";
 import ProductAnalysis from "../components/ProductAnalysis";
 import OrderModal from "../components/OrderModal";
 import { useState } from "react";
+import FertilizerCalculator from "../components/FertilizerCalculator";
 
 export default function ProductPage() {
   const applicationRates = [
@@ -57,7 +58,9 @@ const [isModalOpen, setIsModalOpen] = useState(false);
             </div>
           </div>
         </div>
-
+<div className="mb-20">
+            <FertilizerCalculator />
+        </div>
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           {[

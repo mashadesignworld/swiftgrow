@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import BentoGrid from "./components/BentoGrid";
 import Features from "./components/Features";
+import CalculatorTeaser from "./components/CalculatorTeaser";
 
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
       <Hero />
       <Features />
       <BentoGrid />
-
+<CalculatorTeaser />
     </main>
   );
 }
