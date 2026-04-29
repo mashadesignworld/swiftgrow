@@ -54,6 +54,7 @@ export default function Navbar() {
           <Link href="/" className="text-lg font-medium">Home</Link>
           <Link href="/about" className="text-lg font-medium">About</Link>
           <Link href="/products" className="text-lg font-medium">Products</Link>
+          <Link href="/blog" className="hover:text-green-600 transition"> Farmer's Guide</Link>
         
         </div>
       )}
