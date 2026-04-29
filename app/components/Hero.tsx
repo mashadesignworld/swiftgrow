@@ -73,7 +73,7 @@ export default function Hero() {
         {/* RIGHT SIDE - PRODUCT IMAGE (HIDDEN ON MOBILE) */}
         <div className="hidden md:flex justify-end items-center w-full max-w-md">
           <motion.img
-            src="/heroboomgro.png"
+            src="/heroboomgro1.png"
             alt="Boomgro Organic Fertilizer"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}

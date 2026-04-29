@@ -32,7 +32,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 
             {/* The Product Image */}
             <Image 
-              src="/boomgropackagenew.jpg" 
+              src="/boomgropackagenew1.jpg" 
               alt="BoomGro Organic Fertilizer"
               width={400} 
               height={400}
