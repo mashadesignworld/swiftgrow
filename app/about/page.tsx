@@ -33,7 +33,7 @@ export default function AboutPage() {
               <span className="text-[#e2e8b0]">feed the world.</span>
             </h1>
             <p className="mt-8 text-lg text-white/80 leading-relaxed max-w-lg font-medium">
-              At SwiftGrow Kenya, we aren't just manufacturing fertilizer; we are engineering the future of regenerative agriculture. We bridge the gap between industrial efficiency and organic sustainability.
+              At SwiftGrow Kenya, we aren't just manufacturing fertilizer, we are engineering the future of regenerative agriculture. We bridge the gap between industrial efficiency and organic sustainability.
             </p>
           </div>
           <div className="relative h-[500px] w-full rounded-[40px] overflow-hidden shadow-2xl border-4 border-[#e2e8b0]/20">
