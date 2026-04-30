@@ -26,7 +26,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
           <div>
             <span className="text-[#e2e8b0] font-black uppercase tracking-[0.3em] text-xs mb-4 block">
-              Our Philosophy
+              About Our Philosophy
             </span>
             <h1 className="text-5xl md:text-8xl font-black mt-6 leading-[0.9] tracking-tighter">
               Feed the soil, <br />
