@@ -42,7 +42,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-6 text-xl text-white/90"
+            className="mt-6 text-xl text-[#e2e8b0]"
           >
             Boomgro is a premium organic fertilizer designed for Kenyan farms—improves soil health, boosts yields, and delivers visible results in just one season.
           </motion.p>
@@ -56,7 +56,7 @@ export default function Hero() {
             {/* Button */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="group inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 font-bold text-white shadow-lg shadow-brand-500/20 transition-all hover:scale-105 hover:bg-brand-600 hover:shadow-brand-500/40 border border-white/20"
+              className="group inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 font-bold text-white shadow-lg shadow-brand-500/20 transition-all hover:scale-105 hover:bg-[#e2e8b0] hover:shadow-brand-500/40  hover:text-[#556002] border border-white/20"
             >
               Order Now
               <ShoppingBag className="h-4 w-4 transition-transform group-hover:translate-x-1" />

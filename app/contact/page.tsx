@@ -1,16 +1,31 @@
 "use client";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      q: "Where do you deliver to?",
+      a: "We deliver nationwide across Kenya, with specialized logistics for bulk orders in Kajiado, Nakuru, and Kiambu counties."
+    },
+    {
+      q: "How long does it take to see results?",
+      a: "Most farmers report improved soil texture and plant vigor within 14–21 days of the first application of SwiftGrow Organic."
+    },
+    {
+      q: "Do you offer soil testing services?",
+      a: "Yes! For large-scale farm projects, our agronomists provide soil analysis to recommend the perfect fertilizer ratio."
+    }
+  ];
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(event.currentTarget);
-    // Use your verified Access Key
     formData.append("access_key", "27a352d5-953a-4b48-93cc-50a7f14261e0");
 
     const object = Object.fromEntries(formData);
@@ -28,7 +43,6 @@ export default function ContactPage() {
 
       const result = await response.json();
       if (result.success) {
-        // Redirect to your success page
         window.location.href = "/contact/success";
       } else {
         alert("Something went wrong. Please try again.");
@@ -47,7 +61,7 @@ export default function ContactPage() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-emerald-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#556002] mb-4">
             Let’s Grow Together
           </h1>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
@@ -55,40 +69,40 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
           
           {/* Left Side: Info */}
           <div className="space-y-8">
-            <div className="bg-emerald-900 text-white p-10 rounded-3xl shadow-xl">
+            <div className="bg-[#556002] text-white p-10 rounded-3xl shadow-xl">
               <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="bg-emerald-800 p-3 rounded-xl text-emerald-400">
+                  <div className="bg-white/10 p-3 rounded-xl text-white">
                     <Phone size={24} />
                   </div>
                   <div>
-                    <p className="text-emerald-200 text-xs uppercase tracking-wider font-bold">Call or WhatsApp</p>
+                    <p className="text-white/60 text-xs uppercase tracking-wider font-bold">Call or WhatsApp</p>
                     <p className="text-lg font-medium">+254 721 595 989</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="bg-emerald-800 p-3 rounded-xl text-emerald-400">
+                  <div className="bg-white/10 p-3 rounded-xl text-white">
                     <Mail size={24} />
                   </div>
                   <div>
-                    <p className="text-emerald-200 text-xs uppercase tracking-wider font-bold">Email Us</p>
+                    <p className="text-white/60 text-xs uppercase tracking-wider font-bold">Email Us</p>
                     <p className="text-lg font-medium">info@swiftgrowkenya.co.ke</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="bg-emerald-800 p-3 rounded-xl text-emerald-400">
+                  <div className="bg-white/10 p-3 rounded-xl text-white">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <p className="text-emerald-200 text-xs uppercase tracking-wider font-bold">Visit Us</p>
+                    <p className="text-white/60 text-xs uppercase tracking-wider font-bold">Visit Us</p>
                     <p className="text-lg font-medium">Mai Mahiu, Kenya</p>
                   </div>
                 </div>
@@ -107,7 +121,7 @@ export default function ContactPage() {
                     type="text" 
                     required
                     placeholder="Mkulima John"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#556002] transition"
                   />
                 </div>
                 <div>
@@ -117,7 +131,7 @@ export default function ContactPage() {
                     type="tel" 
                     required
                     placeholder="+254..."
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#556002] transition"
                   />
                 </div>
               </div>
@@ -128,7 +142,7 @@ export default function ContactPage() {
                   name="crop"
                   type="text" 
                   placeholder="e.g. Tomatoes, Maize"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#556002] transition"
                 />
               </div>
 
@@ -139,14 +153,14 @@ export default function ContactPage() {
                   required
                   rows={4}
                   placeholder="How can we help?"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#556002] transition"
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-emerald-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-emerald-700 transition flex items-center justify-center gap-2 disabled:opacity-70"
+                className="w-full bg-[#556002] text-white py-4 rounded-xl font-bold text-lg hover:opacity-90 transition flex items-center justify-center gap-2 disabled:opacity-70 shadow-lg shadow-[#556002]/20"
               >
                 {isSubmitting ? (
                   <>
@@ -158,8 +172,31 @@ export default function ContactPage() {
               </button>
             </form>
           </div>
-
         </div>
+
+        {/* FAQ Section */}
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-[#556002] mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                <button 
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-slate-700 hover:bg-slate-50 transition"
+                >
+                  {faq.q}
+                  {openFaq === index ? <ChevronUp className="text-[#556002]" /> : <ChevronDown className="text-slate-400" />}
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-5 text-slate-600 animate-in slide-in-from-top-2 duration-300">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </main>
   );

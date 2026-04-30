@@ -41,7 +41,7 @@ export default function Navbar() {
             </button>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="hidden md:block bg-brand-500 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-green-700 transition"
+              className="hidden md:block bg-brand-500 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-[#e2e8b0] hover:text-[#556002] transition"
             >
               Shop Now
             </button>

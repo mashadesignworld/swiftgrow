@@ -27,7 +27,7 @@ export default function ResultsGallery() {
         
         <div className="grid md:grid-cols-2 gap-8">
           {studies.map((study, i) => (
-            <div key={i} className="group relative rounded-3xl overflow-hidden min-h-[350px] flex items-end">
+            <div key={i} className="group relative rounded-3xl  overflow-hidden min-h-[350px] flex items-end">
               
               {/* Background Image */}
               <Image 

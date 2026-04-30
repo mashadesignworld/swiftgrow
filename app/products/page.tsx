@@ -21,7 +21,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
         {/* Product Hero */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           {/* The Visual Product Container */}
-          <div className="relative aspect-square w-full rounded-[40px] overflow-hidden shadow-2xl border-4 border-emerald-900/10 bg-emerald-900 flex items-center justify-center">
+          <div className="relative aspect-square w-full rounded-[40px] overflow-hidden shadow-2xl border-4 border-emerald-900/10 bg-[#556002] flex items-center justify-center">
             
             {/* Noise Texture */}
             <div 
@@ -42,8 +42,8 @@ const [isModalOpen, setIsModalOpen] = useState(false);
             />
           </div>
           <div>
-            <h1 className="text-5xl font-extrabold text-emerald-900">BoomGro</h1>
-            <p className="text-xl text-emerald-700 font-medium mt-2">The Black Gold Standard</p>
+            <h1 className="text-5xl font-extrabold text-[#556002]">BoomGro</h1>
+            <p className="text-xl text-[#556002] font-medium mt-2">The Black Gold Standard</p>
             <p className="mt-6 text-slate-600 leading-relaxed text-lg">
               BoomGro is a nutrient-dense organic fertilizer rich in nitrogen, phosphorus, and potassium. 
               It boosts soil fertility, improves soil structure, enhances water-holding capacity, 
@@ -52,7 +52,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
             <div className="mt-8 flex gap-4">
               <button 
               onClick={() => setIsModalOpen(true)}
-              className="bg-brand-500 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-600 transition">
+              className="bg-brand-500 text-white px-8 py-4 rounded-full font-bold hover:bg-[#e2e8b0] hover:text-[#556002] transition">
                 Order Now
               </button>
             </div>

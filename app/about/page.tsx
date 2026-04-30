@@ -18,9 +18,9 @@ export default function AboutPage() {
       <section className="bg-[#586116] py-24 text-white">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-emerald-200 font-semibold uppercase tracking-[0.25em] text-xs">Our Philosophy</h2>
+            <h2 className="text-[#e2e8b0]  text-4xl font-semibold uppercase tracking-[0.25em] text-xs">Our Philosophy</h2>
             <h1 className="text-5xl md:text-7xl font-extrabold mt-6 leading-[1.1] tracking-tighter">Feed the soil and it will feed you.</h1>
-            <p className="mt-8 text-lg text-emerald-50/80 leading-relaxed max-w-lg">
+            <p className="mt-8 text-lg text-[#e2e8b0] leading-relaxed max-w-lg">
               At Swift Grow Kenya, we aren&apos;t just selling fertilizer; we are engineering the future of regenerative agriculture. We bridge the gap between industrial efficiency and organic sustainability.
             </p>
           </div>
@@ -68,14 +68,23 @@ organic solutions.
       </section>
 
       {/* Mission Statement Callout */}
-        <section className="bg-emerald-900 rounded-[30px] p-10 md:p-16 text-white text-center mb-20 shadow-xl relative overflow-hidden">
-            <Quote className="text-emerald-400 mx-auto mb-6" size={48} />
-            <p className="text-2xl md:text-3xl font-medium leading-relaxed italic max-w-3xl mx-auto">
-              &quot; To lead the transition towards regenerative agriculture, fostering a healthy planet and sustainable food systems.&quot;
-            </p>
-            <div className="mt-8 w-20 h-1 bg-emerald-500 mx-auto rounded-full" />
-        </section>
+      <div className="max-w-6xl mx-auto px-6">
+        <section className="bg-[#556002] rounded-[40px] p-10 md:p-16 text-white text-center mb-20 shadow-2xl relative overflow-hidden border border-white/5">
+    {/* Quote Icon in Golden Harvest */}
+    <Quote className="text-[#e2e8b0] mx-auto mb-6 opacity-90" size={48} />
+    
+    {/* Vision Text */}
+    <p className="text-2xl md:text-3xl font-medium leading-relaxed italic max-w-3xl mx-auto text-white">
+        &quot;To lead the transition towards regenerative agriculture, fostering a healthy planet and sustainable food systems.&quot;
+    </p>
+    
+    {/* Divider in Golden Harvest */}
+    <div className="mt-8 w-24 h-1 bg-[#e2e8b0] mx-auto rounded-full opacity-80" />
 
+    {/* Subtle decorative background glow (Optional - adds depth) */}
+    <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#e2e8b0] opacity-5 rounded-full blur-3xl"></div>
+</section>
+</div>
     </main>
   );
 }
