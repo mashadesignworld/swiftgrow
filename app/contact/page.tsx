@@ -58,7 +58,7 @@ export default function ContactPage() {
               {/* Social Proof/Trust Tag */}
               <div className="mt-12 pt-8 border-t border-emerald-800">
                 <p className="italic text-emerald-300">
-                  "Response time is usually under 2 hours during planting season."
+               
                 </p>
               </div>
             </div>
