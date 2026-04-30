@@ -27,6 +27,7 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-green-600 transition">About Us</Link>
           <Link href="/products" className="hover:text-green-600 transition">Products</Link>
             <Link href="/blog" className="hover:text-green-600 transition"> Farmer's Guide</Link>
+            <Link href="/contact" className="hover:text-green-600 transition"> Contacts</Link>
          
           
         </div>
@@ -55,7 +56,7 @@ export default function Navbar() {
           <Link href="/about" className="text-lg font-medium">About</Link>
           <Link href="/products" className="text-lg font-medium">Products</Link>
           <Link href="/blog" className="hover:text-green-600 transition"> Farmer's Guide</Link>
-        
+        <Link href="/contact" className="hover:text-green-600 transition"> Contacts</Link>
         </div>
       )}
     </nav>
