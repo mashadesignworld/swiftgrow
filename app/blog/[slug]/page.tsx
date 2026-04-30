@@ -119,9 +119,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         />
 
         {/* Conversion Banner: Bottom of every article */}
-        <section className="mt-20 p-8 md:p-12 bg-emerald-900 rounded-3xl text-center text-white shadow-2xl relative overflow-hidden">
+        <section className="mt-20 p-8 md:p-12 bg-[#556002] rounded-3xl text-center text-white shadow-2xl relative overflow-hidden">
           {/* Subtle background decoration */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-800 rounded-full -mr-16 -mt-16 opacity-50" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#e2e8b0] rounded-full -mr-16 -mt-16 opacity-50" />
           
           <div className="relative z-10">
             <h3 className="text-3xl font-bold mb-4">Ready to boost your harvest?</h3>

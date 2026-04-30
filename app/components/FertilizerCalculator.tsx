@@ -112,7 +112,7 @@ export default function FertilizerCalculator() {
                 {bags} <span className="text-2xl font-bold">Bags</span>
               </h4>
               <p className="text-lg text-[#556002] font-semibold opacity-90">
-                of {selectedBagSize}kg SwiftGrow Organic
+                of {selectedBagSize}kg Boomgro Organic
               </p>
               
               <div className="mt-8 pt-6 border-t border-slate-100 w-full">
