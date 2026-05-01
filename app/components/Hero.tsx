@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ShoppingBag } from "lucide-react";
 import OrderModal from "../components/OrderModal";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,15 +12,16 @@ export default function Hero() {
     <section className="relative h-[80vh] w-full overflow-hidden">
       <OrderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-        src="https://xkrg4y2oq5saxfmh.public.blob.vercel-storage.com/hero-bg.mp4"
-      />
+<div className="absolute inset-0 z-0">
+        <Image
+          src="/hero.jpg"
+          alt="BoomGro Organic Fertilizer Hero"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
