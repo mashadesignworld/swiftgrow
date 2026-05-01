@@ -23,7 +23,7 @@ export default function AboutPage() {
       {/* 1. Hero: Philosophy */}
       <section className="bg-[#556002] py-24 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#e2e8b0]/5 -skew-x-12 translate-x-20" />
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center justify-start gap-12 relative z-10">
           <div>
             <span className="text-[#e2e8b0] font-black uppercase tracking-[0.3em] text-xs mb-4 block">
               About Our Philosophy
