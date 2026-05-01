@@ -1,57 +1,94 @@
-import {  Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-emerald-950 text-slate-300 border-t border-emerald-900">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-[#556002] text-white/70 border-t border-[#e2e8b0]/10">
+      <div className="container mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Branding Column */}
-          <div className="col-span-1 md:col-span-1">
-            <h2 className="text-white text-2xl font-bold mb-4">Boomgro</h2>
-            <p className="text-sm leading-relaxed">
-              High-quality pelletized organic fertilizer for commercial agriculture, lawns, and gardens. 
-              Feed the soil, and it will feed you.
+          <div className="md:col-span-4">
+            <div className="mb-6">
+              <Image 
+                src="/swiftlogo.png" 
+                alt="SwiftGrow Organics Logo" 
+                width={180} 
+                height={60} 
+                className="brightness-0 invert opacity-90"
+              />
+            </div>
+            <p className="text-sm leading-relaxed max-w-sm font-medium">
+              Revolutionizing Kenyan agriculture with high-potency pelletized organic fertilizer. 
+              We don't just sell fertilizer; we engineer the future of the soil.
             </p>
+            {/* Safe Text-based Social Links */}
+            <div className="mt-8 flex gap-6 text-[10px] font-black uppercase tracking-widest">
+               <Link href="#" className="hover:text-[#e2e8b0] transition-colors">Facebook</Link>
+               <Link href="#" className="hover:text-[#e2e8b0] transition-colors">Instagram</Link>
+               <Link href="#" className="hover:text-[#e2e8b0] transition-colors">X (Twitter)</Link>
+            </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-bold mb-6">Company</h3>
-            <ul className="space-y-4 text-sm">
-              <li><Link href="/about" className="hover:text-emerald-400 transition">About Us</Link></li>
-              <li><Link href="/products" className="hover:text-emerald-950 transition">Products</Link></li>
-              <li><Link href="/contact" className="hover:text-emerald-400 transition">Contact Support</Link></li>
+          <div className="md:col-span-2">
+            <h3 className="text-[#e2e8b0] font-black uppercase tracking-widest text-[10px] mb-8">
+              Company
+            </h3>
+            <ul className="space-y-4 text-sm font-bold">
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/products" className="hover:text-white transition-colors">Our Products</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Farmer&apos;s Guide</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           {/* Contact Details */}
-          <div>
-            <h3 className="text-white font-bold mb-6">Contact</h3>
-            <ul className="space-y-4 text-sm">
-              <li className="flex items-center gap-2"><MapPin size={16} /> Nairobi, Kenya</li>
-              <li className="flex items-center gap-2"><Phone size={16} /> +254 721 595 989</li>
-              <li className="flex items-center gap-2"><Mail size={16} /> info@swiftgrowkenya.co.ke</li>
+          <div className="md:col-span-3">
+            <h3 className="text-[#e2e8b0] font-black uppercase tracking-widest text-[10px] mb-8">
+              Headquarters
+            </h3>
+            <ul className="space-y-5 text-sm">
+              <li className="flex items-start gap-4">
+                <MapPin size={20} className="text-[#e2e8b0] shrink-0" />
+                <span>MaiMahiu, Kenya<br/><span className="text-xs opacity-60 font-medium italic"> Highlands Region</span></span>
+              </li>
+              <li className="flex items-center gap-4">
+                <Phone size={20} className="text-[#e2e8b0] shrink-0" />
+                <span className="font-bold">+254 721 595 989</span>
+              </li>
+              <li className="flex items-center gap-4">
+                <Mail size={20} className="text-[#e2e8b0] shrink-0" />
+                <span className="font-medium break-all">info@swiftgrowkenya.co.ke</span>
+              </li>
             </ul>
           </div>
 
-          {/* Newsletter / Social */}
-          <div>
-            <h3 className="text-white font-bold mb-6">Follow Us</h3>
-            <div className="flex gap-4 mb-8">
-           
+          {/* Philosophy Section */}
+          <div className="md:col-span-3 flex flex-col justify-between">
+            <div>
+              <h3 className="text-[#e2e8b0] font-black uppercase tracking-widest text-[10px] mb-8">
+                The Philosophy
+              </h3>
+              <p className="text-xl font-black leading-tight text-white/90">
+                &quot;Feed the soil,<br />and it will feed you.&quot;
+              </p>
             </div>
-            <p className="text-xs text-emerald-500 italic">&quot;The Future of Sustainable Farming&quot;</p>
+            <div className="mt-8 p-4 bg-white/5 rounded-2xl border border-white/10 text-center">
+              <p className="text-[10px] uppercase tracking-[0.2em] font-black text-[#e2e8b0]">
+                Premium Organic Grade
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-emerald-900/50 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-          <p>© 2026 SwiftGrow Kenya. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-white transition">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition">Terms of Service</Link>
+        <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em]">
+          <p>© 2026 SwiftGrow Organics Kenya.</p>
+          <div className="flex gap-8 mt-6 md:mt-0 opacity-60 hover:opacity-100 transition-opacity">
+            <Link href="#" className="hover:text-[#e2e8b0]">Privacy</Link>
+            <Link href="#" className="hover:text-[#e2e8b0]">Terms</Link>
           </div>
         </div>
       </div>

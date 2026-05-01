@@ -21,27 +21,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[#fcfcf9]">
       
       {/* 1. Hero: Philosophy */}
-      <section className="bg-[#556002] py-24 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#e2e8b0]/5 -skew-x-12 translate-x-20" />
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center justify-start gap-12 relative z-10">
-          <div>
-            <span className="text-[#e2e8b0] font-black uppercase tracking-[0.3em] text-xs mb-4 block">
-              About Our Philosophy
-            </span>
-            <h1 className="text-5xl md:text-8xl font-black mt-6 leading-[0.9] tracking-tighter">
-  <span className="block">Feed the soil,</span>
-  <span className="block">feed the</span>
-  <span className="block text-[#e2e8b0]">world.</span>
-</h1>
-            <p className="mt-8 text-lg text-white/80 leading-relaxed max-w-lg font-medium">
-              At SwiftGrow Kenya, we aren't just manufacturing fertilizer, we are engineering the future of regenerative agriculture. We bridge the gap between industrial efficiency and organic sustainability.
-            </p>
-          </div>
-          <div className="relative h-[500px] w-full rounded-[40px] overflow-hidden shadow-2xl border-4 border-[#e2e8b0]/20">
-            <Image src="/tomatoes.jpg" alt="BoomGro Results" fill className="object-cover" priority />
-          </div>
-        </div>
-      </section>
+      
 
       {/* 2. Impact Stats: The "Authority" Section */}
       <section className="py-12 -mt-12 relative z-20 container mx-auto px-6">
