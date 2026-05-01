@@ -7,7 +7,9 @@ import WhatsAppWrapper from "./components/WhatsAppWrapper";
 
 
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], 
+display: 'swap',  
+});
 
 export const metadata = {
   title: "SwiftGrow Kenya | Premium Organic Fertilizer",
