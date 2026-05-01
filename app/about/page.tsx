@@ -29,9 +29,10 @@ export default function AboutPage() {
               About Our Philosophy
             </span>
             <h1 className="text-5xl md:text-8xl font-black mt-6 leading-[0.9] tracking-tighter">
-              Feed the soil, <br />
-              <span className="text-[#e2e8b0]">feed the world.</span>
-            </h1>
+  <span className="block">Feed the soil,</span>
+  <span className="block">feed the</span>
+  <span className="block text-[#e2e8b0]">world.</span>
+</h1>
             <p className="mt-8 text-lg text-white/80 leading-relaxed max-w-lg font-medium">
               At SwiftGrow Kenya, we aren't just manufacturing fertilizer, we are engineering the future of regenerative agriculture. We bridge the gap between industrial efficiency and organic sustainability.
             </p>
