@@ -22,6 +22,7 @@ export default function AboutPage() {
       
       {/* 1. Hero: Philosophy */}
   
+    {/* 1. Hero: Philosophy */}
       <section className="bg-[#556002] py-24 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#e2e8b0]/5 -skew-x-12 translate-x-20" />
         
@@ -34,9 +35,9 @@ export default function AboutPage() {
               About Our Philosophy
             </span>
             <h1 className="text-5xl md:text-8xl font-black mt-6 leading-[0.9] tracking-tighter">
-              <span className="block">Feed the ,</span>
-              <span className="block">soil feed </span>
-              <span className="block text-[#e2e8b0]">the world.</span>
+              <span className="block">Feed the soil,</span>
+              <span className="block">feed the</span>
+              <span className="block text-[#e2e8b0]">world.</span>
             </h1>
             <p className="mt-8 text-lg text-white/80 leading-relaxed font-medium">
               At SwiftGrow Kenya, we aren't just manufacturing fertilizer, we are engineering the future of regenerative agriculture. We bridge the gap between industrial efficiency and organic sustainability.
