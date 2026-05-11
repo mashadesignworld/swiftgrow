@@ -1,37 +1,27 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Calculator, Sprout, Package } from "lucide-react";
 
 export default function FertilizerCalculator() {
   const [unitValue, setUnitValue] = useState<number>(0);
   const [unitType, setUnitType] = useState<"acre" | "ha">("acre");
-  const [selectedBagSize, setSelectedBagSize] = useState<10 | 20 | 50>(50);
-  const [bags, setBags] = useState<number>(0);
+  const [selectedBagSize, setSelectedBagSize] = useState<25 | 50>(50);
 
   // Constants for SwiftGrow
-  const RATE_PER_ACRE = 500; // Total 500kg recommended per acre
+  const RATE_PER_ACRE = 500; 
 
-  useEffect(() => {
-    if (unitValue <= 0) {
-      setBags(0);
-      return;
-    }
-
-    let totalKgRequired = 0;
-    if (unitType === "acre") {
-      totalKgRequired = unitValue * RATE_PER_ACRE;
-    } else {
-      // 1 hectare is ~2.47 acres
-      totalKgRequired = (unitValue * 2.47) * RATE_PER_ACRE;
-    }
-
-    // Calculate bags based on the user's chosen packaging size
-    setBags(Math.ceil(totalKgRequired / selectedBagSize));
-  }, [unitValue, unitType, selectedBagSize]);
+  // --- CALCULATION LOGIC (Derived State) ---
+  // This calculates fresh on every render without needing an Effect
+  let bags = 0;
+  if (unitValue > 0) {
+    const multiplier = unitType === "acre" ? 1 : 2.47;
+    const totalKgRequired = unitValue * multiplier * RATE_PER_ACRE;
+    bags = Math.ceil(totalKgRequired / selectedBagSize);
+  }
+  // ------------------------------------------
 
   return (
-    <div id="calculator"
-      className="bg-[#556002]/5 rounded-[40px] p-8 md:p-12 border border-[#556002]/10 shadow-sm max-w-4xl mx-auto my-10">
+    <div id="calculator" className="bg-[#556002]/5 rounded-[40px] p-8 md:p-12 border border-[#556002]/10 shadow-sm max-w-4xl mx-auto my-10">
       
       {/* Header */}
       <div className="flex items-center gap-3 mb-8 border-b border-[#556002]/10 pb-6">
@@ -82,11 +72,11 @@ export default function FertilizerCalculator() {
           {/* 3. Bag Size Selection */}
           <div>
             <label className="block text-sm font-bold text-[#556002] mb-3">3. Preferred Packaging</label>
-            <div className="grid grid-cols-3 gap-2">
-              {[10, 20, 50].map((size) => (
+            <div className="grid grid-cols-2 gap-2"> {/* Changed to grid-cols-2 since you only have two sizes */}
+              {[25, 50].map((size) => (
                 <button
                   key={size}
-                  onClick={() => setSelectedBagSize(size as 10 | 20 | 50)}
+                  onClick={() => setSelectedBagSize(size as 25 | 50)}
                   className={`py-3 rounded-xl border-2 font-bold transition-all ${
                     selectedBagSize === size 
                     ? "bg-[#e2e8b0] border-[#556002] text-[#556002]" 

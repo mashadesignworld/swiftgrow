@@ -11,14 +11,13 @@ export default function OrderModal({ isOpen, onClose }: OrderModalProps) {
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
-  const [bagSize, setBagSize] = useState<"10kg" | "20kg" | "50kg">("50kg");
+  const [bagSize, setBagSize] = useState<"25kg" | "50kg">("50kg");
   const [totalPrice, setTotalPrice] = useState(0);
 
   // UPDATE THESE WITH YOUR ACTUAL BOOMGRO PRICES
   const PRICES = {
-    "10kg": 2000,
-    "20kg": 4000,
-    "50kg": 9000
+       "25kg": 1100,
+      "50kg": 2000
   };
 
   useEffect(() => {
@@ -95,7 +94,7 @@ Please confirm delivery fee to my location.`;
           <div>
             <label className="block text-[10px] font-bold uppercase tracking-widest text-[#556002]/60 mb-2 ml-1 text-center">Select Packaging</label>
             <div className="flex gap-2 p-1 bg-slate-100 rounded-2xl border-2 border-slate-100">
-              {(["10kg", "20kg", "50kg"] as const).map((size) => (
+              {(["25kg", "50kg"] as const).map((size) => (
                 <button
                   key={size}
                   onClick={() => setBagSize(size)}

@@ -29,7 +29,7 @@ export default function BentoGrid() {
   />
   
   {/* Dark Gradient Overlay for Text Readability */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
   {/* Content (z-10 puts text on top of the image) */}
   <div className="relative z-10 text-white">
@@ -45,10 +45,15 @@ export default function BentoGrid() {
         <motion.div 
           whileHover={{ scale: 1.01 }}
           className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm"
+          style={{ 
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/tomato2.jpeg')`,
+    backgroundRepeat: 'no-repeat'
+  }}
         >
+          
           <BarChart3 className="text-[#e2e8b0] mb-4" />
-          <h4 className="text-lg font-bold">45% Higher Yield</h4>
-          <p className="text-sm text-slate-500 mt-1">Verified results from 500+ trial farms across Rift Valley.</p>
+          <h4 className="text-lg font-bold text-white mt-1">Verified results from </h4>
+          <span className="text-sm  text-[#e2e8b0]">trial farms across Kenya.</span> 
         </motion.div>
 
         {/* Science Tile */}
